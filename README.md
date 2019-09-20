@@ -40,12 +40,12 @@ Once you have lerna and set your direction at project root follow below steps to
 
 ## Built With
 
-TypeScript
-React - Core web library used
-Redux - State manage (powered by Redux-Saga, Redux-Persist)
-Material-UI - Used to generate UI content
-Sass - Styling pre-Processor
-Jest - Testing frameWork (powered by Enzyme)
+-   TypeScript
+-   React - Core web library used
+-   Redux - State manage (powered by Redux-Saga, Redux-Persist)
+-   Material-UI - Used to generate UI content
+-   Sass - Styling pre-Processor
+-   Jest - Testing frameWork (powered by Enzyme)
 
 Versioning
 We use SemVer for versioning. For the versions available, see the tags on this repository.
