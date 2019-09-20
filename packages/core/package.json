@@ -1,0 +1,77 @@
+{
+    "name": "@users_assignment/core",
+    "private": true,
+    "author": "@tajpouria",
+    "version": "1.0.0",
+    "description": "core",
+    "keywords": [
+        "users_assignment core",
+        "json schema"
+    ],
+    "repository": {
+        "type": "git"
+    },
+    "license": "MIT",
+    "scripts": {
+        "watch": "concurrently -k -p \"[{name}]\" -n \"Sass,TypeScript,Node\" -c \"yellow.bold,cyan.bold\" \"npm run watch:scss\" \"npm run watch:ts\"",
+        "watch:ts": "npm run build:css && react-scripts-ts start",
+        "watch:scss": "node-sass public/css/index.scss public/css/index.css -w",
+        "build": "npm run build:pre && npm run build:css && react-scripts-ts build",
+        "build:css": "node-sass public/css/index.scss public/css/index.css",
+        "build:dev": "npm run build:pre && npm run build:css && npm run build:webpack-dev",
+        "build:prod": "npm run build:pre && npm run build:css && npm run build:webpack-prod",
+        "build:webpack-dev": "set NODE_ENV=development && npm run build:css && webpack --progress",
+        "build:webpack-prod": "set NODE_ENV=production && npm run build:css && webpack --progress",
+        "build:pre": "rimraf build",
+        "test": "jest --watchAll --config ./jest-config.js --verbose false",
+        "eject": "react-scripts-ts eject"
+    },
+    "dependencies": {
+        "classnames": "2.2.6",
+        "connected-react-router": "6.4.0",
+        "history": "4.9.0",
+        "lodash": "4.17.11",
+        "react": "16.8.6",
+        "react-dom": "16.8.6",
+        "react-redux": "7.0.3",
+        "react-router-dom": "^5.0.1",
+        "redux-persist": "^6.0.0",
+        "redux-saga": "1.0.2",
+        "sha.js": "2.4.11"
+    },
+    "devDependencies": {
+        "@types/classnames": "2.2.7",
+        "@types/enzyme": "^3.10.3",
+        "@types/enzyme-adapter-react-16": "^1.0.5",
+        "@types/history": "4.7.2",
+        "@types/jest": "^24.0.18",
+        "@types/lodash": "4.14.132",
+        "@types/node": "^12.7.2",
+        "@types/node-sass": "4.11.0",
+        "@types/react": "16.8.19",
+        "@types/react-dom": "16.8.4",
+        "@types/react-redux": "7.0.9",
+        "@types/react-router": "5.0.1",
+        "@types/react-router-dom": "^4.3.5",
+        "@types/redux-mock-store": "^1.0.1",
+        "@types/redux-persist": "^4.3.1",
+        "@types/webpack-env": "1.13.9",
+        "@users_assignment/utility": "^1.0.0",
+        "concurrently": "4.1.0",
+        "enzyme": "^3.10.0",
+        "enzyme-adapter-react-16": "^1.14.0",
+        "enzyme-to-json": "^3.4.0",
+        "node-sass": "4.12.0",
+        "react-scripts-ts": "3.1.0",
+        "redux-mock-store": "^1.5.3",
+        "ts-jest": "^24.1.0",
+        "typescript": "3.5.1"
+    },
+    "sideEffects": false,
+    "publishConfig": {
+        "access": "private"
+    },
+    "engines": {
+        "node": ">=10.0.0"
+    }
+}

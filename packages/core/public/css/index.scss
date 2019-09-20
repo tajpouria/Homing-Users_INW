@@ -1,0 +1,25 @@
+/**
+ * @license
+ * Copyright @tajpouria. All Rights Reserved.
+ *
+ * Use of this source code is governed by MIT license.
+ * http://findpouria.netlify.com
+ */
+
+@import "./sf-compact-display-font.scss";
+@import "./home.scss";
+
+$font-family-thin: "SF Display Thin";
+$font-family-bold: "SF Display Bold";
+html,
+body,
+#root {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+* {
+    font-family: $font-family-bold;
+}
